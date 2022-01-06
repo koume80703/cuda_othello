@@ -1,5 +1,4 @@
 #include "header/board.hpp"
-#include "header/toString.hpp"
 
 Board::Board() : BOARD_SIZE(8)
 {
