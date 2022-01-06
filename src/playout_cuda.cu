@@ -1,9 +1,15 @@
 #include "header/playout_cuda.cuh"
 #include "header/kernel.cuh"
 
+double get_time_sec()
+{
+    return static_cast<double>(duration_cast<nanoseconds>(steady_clock::clock().time_since_epch()).count()) / (1000 * 1000 * 1000);
+}
+
 float playout_cuda(State state)
 {
-    int start = clock();
+    auto start, end, tmp, elapsed;
+    start = get_time_sec();
 
     int nElem = 4096;
     size_t size_sc = sizeof(STATE_CUDA);
@@ -31,19 +37,21 @@ float playout_cuda(State state)
     std::random_device rnd;
     int seed = rnd();
 
-    int t0 = clock();
-    double elapsed = static_cast<double>(t0 - start) / CLOCKS_PER_SEC * 1000.0;
-    printf("memory allocate time: %.3f [ms], ", elapsed);
-    t0 = clock();
+    tmp = get_time_sec();
+    elapsed = tmp - start;
+    start = tmp;
+    printf("memory alloctae time: %.3f [ms], ", elapsed);
+    total += elapsed;
 
     kernel<<<grid, block>>>(d_sc, d_result, seed);
 
     CHECK(cudaDeviceSynchronize());
 
-    int t1 = clock();
-    elapsed = static_cast<double>(t1 - t0) / CLOCKS_PER_SEC * 1000.0;
+    tmp = get_time_sec();
+    elapsed = tmp - start;
+    start = tmp;
     printf("kernel execute time: %.3f [ms], ", elapsed);
-    t1 = clock();
+    total += elapsed;
 
     CHECK(cudaMemcpy(h_result, d_result, size_result, cudaMemcpyDeviceToHost));
 
@@ -59,9 +67,9 @@ float playout_cuda(State state)
     free(h_sc);
     free(h_result);
 
-    int t2 = clock();
-    elapsed = static_cast<double>(t2 - t1) / CLOCKS_PER_SEC * 1000.0;
-    double total = static_cast<double>(t2 - start) / CLOCKS_PER_SEC * 1000.0;
+    tmp = get_time_sec();
+    elapsed = tmp - start;
+    total += elapsed;
 
     printf("others time: %.3f [ms], total time: %.3f [ms]\n", elapsed, total);
 
