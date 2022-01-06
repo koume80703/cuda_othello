@@ -11,8 +11,9 @@
 #define BOARD_SIZE 8
 #define START_PLAYER 1
 
-typedef struct _STATE_CUDA {
-  int board[BOARD_SIZE+2][BOARD_SIZE+2];
+typedef struct _STATE_CUDA
+{
+  int board[BOARD_SIZE + 2][BOARD_SIZE + 2];
   /*
   EMPTY = 0, WHITE = -1, BLACK = 1, WALL = 2, NONE = -255
   */
@@ -26,8 +27,8 @@ typedef struct _STATE_CUDA {
   bool was_passed;
 } STATE_CUDA;
 
-void trans_data(State state, STATE_CUDA* dfc);
-void trans_board(Board board, int bArray[][BOARD_SIZE+2]);
+void trans_data(State state, STATE_CUDA *dfc);
+void trans_board(Board board, int bArray[][BOARD_SIZE + 2]);
 int player_to_int(PLAYER p);
 int board_state_to_int(BOARD_STATE bs);
-void show_board(int board[][BOARD_SIZE+2]);
+void show_board(int board[][BOARD_SIZE + 2]);

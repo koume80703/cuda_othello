@@ -6,8 +6,9 @@
 
 using namespace std;
 
-class MCTS{
-    public:
-        static void train(Node& root_node, int simulation);
-        static pair<int, int> select_action(Node& root_node);
+class MCTS
+{
+public:
+    static void train(Node &root_node, int simulation);
+    static pair<int, int> select_action(Node &root_node);
 };

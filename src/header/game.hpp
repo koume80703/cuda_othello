@@ -7,29 +7,30 @@
 
 using namespace std;
 
-class Game{
+class Game
+{
 private:
     int turn;
     Board board;
-        
+
     PLAYER player, winner;
     const PLAYER START_PLAYER;
-        
+
     bool was_passed;
-        
+
     vector<int> stone_num;
 
 public:
     Game();
 
-    Game(const Game& rhs);
-    Game& operator=(const Game& rhs);
+    Game(const Game &rhs);
+    Game &operator=(const Game &rhs);
 
     PLAYER state_to_player(BOARD_STATE bs);
     BOARD_STATE player_to_state(PLAYER p);
-        
+
     bool is_finished();
-    vector< pair<int, int> > vector_placable_stone();
+    vector<pair<int, int>> vector_placable_stone();
     string get_color(PLAYER player);
     PLAYER get_current_player();
     PLAYER get_next_player();
@@ -47,7 +48,7 @@ public:
     void show_board();
 
     PLAYER get_winner();
-    Board& get_board();
+    Board &get_board();
     int get_turn();
     bool get_was_passed();
 };

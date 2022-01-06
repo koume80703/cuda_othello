@@ -5,19 +5,21 @@
 
 using namespace std;
 
-class Node{
+class Node
+{
 public:
     Node(State s, int eb);
 
     float evaluate();
     void expand();
-    Node& next_child_based_ucb();
+    Node &next_child_based_ucb();
     static float playout(State state);
 
     State get_state();
     vector<Node> get_children();
     int get_n();
-private:        
+
+private:
     State state;
     float w;
     int n, expand_base;
