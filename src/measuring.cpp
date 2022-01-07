@@ -12,10 +12,15 @@ double get_time_msec()
 
 void print_time(string str, double time)
 {
-    cout << setw(30) << left << str << resetiosflags(ios_base::floatfield) << ": " << time << " [ms]" << endl;
+    printf("%-30s: %.2f [ms]\n", str.c_str(), time);
 }
 
 void print_data(string str, double data)
 {
-    cout << setw(30) << left << str << resetiosflags(ios_base::floatfield) << ": " << data << endl;
+    printf("%-30s: %.2f\n", str.c_str(), data);
+}
+
+void print_percentage(double mt, double et, double ot)
+{
+    printf("percentage -> malloc: %.3f [%%], execution: %.3f [%%], others: %.3f [%%]\n", mt, et, ot);
 }

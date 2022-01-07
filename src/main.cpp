@@ -54,7 +54,7 @@ int play_othello()
 int main(void)
 {
     int win = 0, lose = 0, draw = 0;
-    const int play_num = 20;
+    const int play_num = 10;
 
     cout << "CUDA_PLAYOUT: " << CUDA_PLAYOUT << ", N_PLAYOUT: " << N_PLAYOUT << endl;
 

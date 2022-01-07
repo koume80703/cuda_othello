@@ -45,8 +45,7 @@ float Node::evaluate()
             mt_per_total = malloc_time * 100 / elapsed;
             et_per_total = exe_time * 100 / elapsed;
             ot_per_total = others_time * 100 / elapsed;
-            cout << "percentage->" << endl;
-            cout << "    malloc: " << mt_per_total << " [%], execution: " << et_per_total << " [%], others: " << ot_per_total << " [%]" << endl;
+            print_percentage(mt_per_total, et_per_total, ot_per_total);
         }
         else
         {

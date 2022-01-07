@@ -14,4 +14,5 @@ using namespace std::chrono;
 double get_time_msec();
 void print_time(string str, double time);
 void print_data(string str, double time);
+void print_percentage(double mt, double et, double ot);
 
