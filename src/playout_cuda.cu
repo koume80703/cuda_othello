@@ -3,13 +3,18 @@
 
 double get_time_sec()
 {
-    return static_cast<double>(duration_cast<nanoseconds>(steady_clock::clock().time_since_epch()).count()) / (1000 * 1000 * 1000);
+    return static_cast<double>(duration_cast<nanoseconds>(steady_clock::now().time_since_epoch()).count()) / (1000 * 1000 * 1000);
+}
+
+double get_time_msec()
+{
+    return static_cast<double>(duration_cast<nanoseconds>(steady_clock::now().time_since_epoch()).count()) / (1000 * 1000);
 }
 
 float playout_cuda(State state)
 {
-    auto start, end, tmp, elapsed;
-    start = get_time_sec();
+    double start, tmp, elapsed, total = 0;
+    start = get_time_msec();
 
     int nElem = 4096;
     size_t size_sc = sizeof(STATE_CUDA);
@@ -37,17 +42,17 @@ float playout_cuda(State state)
     std::random_device rnd;
     int seed = rnd();
 
-    tmp = get_time_sec();
+    tmp = get_time_msec();
     elapsed = tmp - start;
     start = tmp;
-    printf("memory alloctae time: %.3f [ms], ", elapsed);
+    printf("memory allocate time: %.3f [ms], ", elapsed);
     total += elapsed;
 
     kernel<<<grid, block>>>(d_sc, d_result, seed);
 
     CHECK(cudaDeviceSynchronize());
 
-    tmp = get_time_sec();
+    tmp = get_time_msec();
     elapsed = tmp - start;
     start = tmp;
     printf("kernel execute time: %.3f [ms], ", elapsed);
@@ -67,7 +72,7 @@ float playout_cuda(State state)
     free(h_sc);
     free(h_result);
 
-    tmp = get_time_sec();
+    tmp = get_time_msec();
     elapsed = tmp - start;
     total += elapsed;
 

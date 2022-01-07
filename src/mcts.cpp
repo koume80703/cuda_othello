@@ -7,7 +7,7 @@ void MCTS::train(Node &root_node, int simulation)
     root_node.expand();
     for (int i = 0; i < simulation; i++)
     {
-        printf("i: %d; ", i);
+        printf("i: %d-> ", i);
         root_node.evaluate();
     }
 }
