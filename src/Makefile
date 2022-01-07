@@ -1,7 +1,6 @@
 CC = nvcc
 PROGRAM = othello
-SOURCE = main.o game.o state.o board.o node.o mcts.o argmax.o ucb1.o trans_data.o playout_cuda.o kernel.o
-TEST_SOURCE = test_cuda.o trans_data.o game.o state.o board.o playout_cuda.o kernel.o
+SOURCE = main.o game.o state.o board.o node.o mcts.o argmax.o ucb1.o trans_data.o playout_cuda.o kernel.o measuring.o
 CFLAGS= -c
 
 
@@ -44,13 +43,7 @@ playout_cuda.o : playout_cuda.cu
 kernel.o : kernel.cu
 	$(CC) $(CFLAGS) -lcurand $^
 
-test_cuda.o : test_cuda.cpp
+measuring.o : measuring.cpp
 	$(CC) $(CFLAGS) $^
-
-test.o : test.cpp
-	$(CC) $(CFLAGS) $^
-
-test : $(TEST_SOURCE)
-	$(CC) -g -o test $^
 
 clean:; rm -f *.o 

@@ -2,6 +2,7 @@
 #include "header/ucb1.hpp"
 #include "header/argmax.hpp"
 #include "header/playout_cuda.cuh"
+#include "header/measuring.hpp"
 
 Node::Node(State s, int eb = 20)
 {
@@ -26,7 +27,41 @@ float Node::evaluate()
     if (children.empty())
     {
         State tmp = state;
-        float value = playout_cuda(tmp);
+
+        float value = 0;
+        double start, end, elapsed;
+        if (CUDA_PLAYOUT)
+        {
+            start = get_time_msec();
+            
+            value += playout_cuda(tmp);
+            
+            end = get_time_msec();
+            elapsed = end - start;
+            print_time("elapsed time with CUDA", elapsed);
+            
+            extern double malloc_time, exe_time, others_time;
+            double mt_per_total, et_per_total, ot_per_total;
+            mt_per_total = malloc_time * 100 / elapsed;
+            et_per_total = exe_time * 100 / elapsed;
+            ot_per_total = others_time * 100 / elapsed;
+            cout << "percentage->" << endl;
+            cout << "    malloc: " << mt_per_total << " [%], execution: " << et_per_total << " [%], others: " << ot_per_total << " [%]" << endl;
+        }
+        else
+        {
+            start = get_time_msec();
+            
+            for (int i = 0; i < N_PLAYOUT; i++)
+            {
+                value += Node::playout(tmp);
+            }
+            
+            end = get_time_msec();
+            elapsed = end - start;
+            print_time("elapsed time with CPU", elapsed);
+        }
+        
         w += value;
         n++;
 

@@ -1,22 +1,13 @@
 #include "header/playout_cuda.cuh"
 #include "header/kernel.cuh"
-
-double get_time_sec()
-{
-    return static_cast<double>(duration_cast<nanoseconds>(steady_clock::now().time_since_epoch()).count()) / (1000 * 1000 * 1000);
-}
-
-double get_time_msec()
-{
-    return static_cast<double>(duration_cast<nanoseconds>(steady_clock::now().time_since_epoch()).count()) / (1000 * 1000);
-}
+#include "header/measuring.hpp"
 
 float playout_cuda(State state)
 {
-    double start, tmp, elapsed, total = 0;
+    double start, tmp, elapsed;
     start = get_time_msec();
 
-    int nElem = 4096;
+    int nElem = N_PLAYOUT;
     size_t size_sc = sizeof(STATE_CUDA);
     size_t size_result = nElem * sizeof(float);
 
@@ -34,29 +25,31 @@ float playout_cuda(State state)
     CHECK(cudaMemcpy(d_sc, h_sc, size_sc, cudaMemcpyHostToDevice));
     CHECK(cudaMemcpy(d_result, h_result, size_result, cudaMemcpyHostToDevice));
 
-    const int threads_per_block = 1024;
+    const int threads_per_block = 512;
 
     dim3 block(threads_per_block, 1, 1);
-    dim3 grid(nElem / block.x, 1, 1);
+    dim3 grid((nElem + block.x -1) / block.x, 1, 1);
 
     std::random_device rnd;
     int seed = rnd();
 
+    // memory allocate time
     tmp = get_time_msec();
     elapsed = tmp - start;
     start = tmp;
-    printf("memory allocate time: %.3f [ms], ", elapsed);
-    total += elapsed;
-
+    extern double malloc_time;
+    malloc_time = elapsed;
+    
     kernel<<<grid, block>>>(d_sc, d_result, seed);
 
     CHECK(cudaDeviceSynchronize());
 
+    // exectution time
     tmp = get_time_msec();
     elapsed = tmp - start;
     start = tmp;
-    printf("kernel execute time: %.3f [ms], ", elapsed);
-    total += elapsed;
+    extern double exe_time;
+    exe_time = elapsed;
 
     CHECK(cudaMemcpy(h_result, d_result, size_result, cudaMemcpyDeviceToHost));
 
@@ -71,12 +64,13 @@ float playout_cuda(State state)
 
     free(h_sc);
     free(h_result);
-
+    
+    // others time
     tmp = get_time_msec();
     elapsed = tmp - start;
-    total += elapsed;
+    extern double others_time;
+    others_time = elapsed;
 
-    printf("others time: %.3f [ms], total time: %.3f [ms]\n", elapsed, total);
 
     return sum_result;
 }

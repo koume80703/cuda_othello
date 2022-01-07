@@ -1,4 +1,5 @@
 #include "header/main.hpp"
+#include "header/measuring.hpp"
 
 int play_othello()
 {
@@ -53,16 +54,18 @@ int play_othello()
 int main(void)
 {
     int win = 0, lose = 0, draw = 0;
-    const int play_num = 50;
+    const int play_num = 20;
+
+    cout << "CUDA_PLAYOUT: " << CUDA_PLAYOUT << ", N_PLAYOUT: " << N_PLAYOUT << endl;
 
     for (int i = 0; i < play_num; i++)
     {
         cout << "<play: " << i << ">" << endl;
-        int tmp = play_othello();
+        int result = play_othello();
         cout << endl;
-        if (tmp == 0)
+        if (result == 0)
             draw++;
-        else if (tmp == 1)
+        else if (result == 1)
             win++;
         else
             lose++;
