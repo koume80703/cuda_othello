@@ -9,21 +9,21 @@ int play_othello()
     {
         if (state.is_done())
         {
-            state.game.show_board();
-            state.game.show_score();
+            if (BASIC_OUTPUT)
+            {
+                state.game.show_board();
+                state.game.show_score();
+            }
             if (state.is_draw())
             {
-                cout << "draw" << endl;
                 return 0;
             }
             else if (state.is_lose())
             {
-                cout << "lose" << endl;
                 return -1;
             }
             else
             {
-                cout << "win" << endl;
                 return 1;
             }
         }
@@ -52,15 +52,18 @@ int play_othello()
 }
 
 int main(void)
-{
+{    
     int win = 0, lose = 0, draw = 0;
     const int play_num = 10;
 
-    cout << "CUDA_PLAYOUT: " << CUDA_PLAYOUT << ", N_PLAYOUT: " << N_PLAYOUT << endl;
+    
+    time_t time = system_clock::to_time_t(system_clock::now());
+    cout << "Starting program at " << ctime(&time) << endl;
+    cout << "CUDA_PLAYOUT: " << CUDA_PLAYOUT << ", N_PLAYOUT: " << N_PLAYOUT << endl << endl;
 
     for (int i = 0; i < play_num; i++)
     {
-        cout << "<play: " << i << ">" << endl;
+        cout << "play: " << i << endl;
         int result = play_othello();
         cout << endl;
         if (result == 0)
@@ -71,7 +74,15 @@ int main(void)
             lose++;
     }
 
-    cout << "win: " << win << endl;
-    cout << "lose: " << lose << endl;
-    cout << "draw: " << draw << endl;
+    if (BASIC_OUTPUT)
+    {
+        cout << "win: " << win << endl;
+        cout << "lose: " << lose << endl;
+        cout << "draw: " << draw << endl;
+    }
+
+    cout << endl;
+
+    time = system_clock::to_time_t(system_clock::now());
+    cout << "Program end at " << ctime(&time) << endl;
 }

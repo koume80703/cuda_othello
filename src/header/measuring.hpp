@@ -4,9 +4,11 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <ctime>
 
 #define CUDA_PLAYOUT false
-#define N_PLAYOUT 512
+#define N_PLAYOUT 256
+#define BASIC_OUTPUT false
 
 using namespace std;
 using namespace std::chrono;

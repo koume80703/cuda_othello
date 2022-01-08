@@ -6,21 +6,22 @@
 void MCTS::train(Node &root_node, int simulation)
 {
     root_node.expand();
-    
+
+    printf("%2d, ", root_node.get_state().game.get_turn());
     double start, end, elapsed;
     start = get_time_msec();
     
     for (int i = 0; i < simulation; i++)
     {
-        printf("i: %2d -> ", i);
+        // printf("i: %2d -> ", i);
         root_node.evaluate();
     }
     
     end = get_time_msec();
     elapsed = end - start;
 
-    print_time("average evaluate time", elapsed / simulation);
-    cout << endl;
+    // print_time("average evaluate time", elapsed / simulation);
+    printf("%3.3f [ms]\n", elapsed / simulation);
 }
 
 pair<int, int> MCTS::select_action(Node &root_node)

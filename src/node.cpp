@@ -32,33 +32,35 @@ float Node::evaluate()
         double start, end, elapsed;
         if (CUDA_PLAYOUT)
         {
-            start = get_time_msec();
+            // start = get_time_msec();
             
             value += playout_cuda(tmp);
+
+            /*
+              end = get_time_msec();
+              elapsed = end - start;
+              print_time("elapsed time with CUDA", elapsed);
             
-            end = get_time_msec();
-            elapsed = end - start;
-            print_time("elapsed time with CUDA", elapsed);
-            
-            extern double malloc_time, exe_time, others_time;
-            double mt_per_total, et_per_total, ot_per_total;
-            mt_per_total = malloc_time * 100 / elapsed;
-            et_per_total = exe_time * 100 / elapsed;
-            ot_per_total = others_time * 100 / elapsed;
-            print_percentage(mt_per_total, et_per_total, ot_per_total);
+              extern double malloc_time, exe_time, others_time;
+              double mt_per_total, et_per_total, ot_per_total;
+              mt_per_total = malloc_time * 100 / elapsed;
+              et_per_total = exe_time * 100 / elapsed;
+              ot_per_total = others_time * 100 / elapsed;
+              print_percentage(mt_per_total, et_per_total, ot_per_total);
+            */
         }
         else
         {
-            start = get_time_msec();
+            // start = get_time_msec();
             
             for (int i = 0; i < N_PLAYOUT; i++)
             {
                 value += Node::playout(tmp);
             }
             
-            end = get_time_msec();
-            elapsed = end - start;
-            print_time("elapsed time with CPU", elapsed);
+            // end = get_time_msec();
+            // elapsed = end - start;
+            // print_time("elapsed time with CPU", elapsed);
         }
         
         w += value;
