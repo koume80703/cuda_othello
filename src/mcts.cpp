@@ -13,14 +13,12 @@ void MCTS::train(Node &root_node, int simulation)
     
     for (int i = 0; i < simulation; i++)
     {
-        // printf("i: %2d -> ", i);
         root_node.evaluate();
     }
     
     end = get_time_msec();
     elapsed = end - start;
 
-    // print_time("average evaluate time", elapsed / simulation);
     printf("%3.3f [ms]\n", elapsed / simulation);
 }
 

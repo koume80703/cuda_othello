@@ -37,8 +37,8 @@ int play_othello()
         pair<int, int> action;
         if (state.is_first_player())
         {
-            int simulation = 100;
-            Node root_node = Node(state, 20);
+            int simulation = N_SIMULATION;
+            Node root_node = Node(state, EXPAND_BASE);
             MCTS::train(root_node, simulation);
             action = MCTS::select_action(root_node);
             state = state.next(action);
@@ -59,7 +59,8 @@ int main(void)
     
     time_t time = system_clock::to_time_t(system_clock::now());
     cout << "Starting program at " << ctime(&time) << endl;
-    cout << "CUDA_PLAYOUT: " << CUDA_PLAYOUT << ", N_PLAYOUT: " << N_PLAYOUT << endl << endl;
+    cout << "CUDA_PLAYOUT: " << CUDA_PLAYOUT << ", N_PLAYOUT: " << N_PLAYOUT << endl;
+    cout << "N_SIMULATION: " << N_SIMULATION << ", EXPAND_BASE: " << EXPAND_BASE << endl << endl;
 
     for (int i = 0; i < play_num; i++)
     {
