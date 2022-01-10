@@ -29,39 +29,43 @@ float Node::evaluate()
         State tmp = state;
 
         float value = 0;
-        double start, end, elapsed;
+
+        double start, end, elapsed_cuda, elapsed_cpu;
         if (CUDA_PLAYOUT)
         {
-            // start = get_time_msec();
-            
+            start = get_time_msec();
             value += playout_cuda(tmp);
+            end = get_time_msec();
+            elapsed_cuda = end - start;
 
-            /*
-              end = get_time_msec();
-              elapsed = end - start;
-              print_time("elapsed time with CUDA", elapsed);
-            
-              extern double malloc_time, exe_time, others_time;
-              double mt_per_total, et_per_total, ot_per_total;
-              mt_per_total = malloc_time * 100 / elapsed;
-              et_per_total = exe_time * 100 / elapsed;
-              ot_per_total = others_time * 100 / elapsed;
-              print_percentage(mt_per_total, et_per_total, ot_per_total);
-            */
+            start = get_time_msec();
+            for (int i = 0; i < N_PLAYOUT; i++)
+            {
+                Node::playout(tmp);
+            }
+            end = get_time_msec();
+            elapsed_cpu = end - start;
         }
         else
         {
-            // start = get_time_msec();
-            
+            start = get_time_msec();
             for (int i = 0; i < N_PLAYOUT; i++)
             {
                 value += Node::playout(tmp);
             }
-            
-            // end = get_time_msec();
-            // elapsed = end - start;
-            // print_time("elapsed time with CPU", elapsed);
+            end = get_time_msec();
+            elapsed_cpu = end - start;
+
+            start = get_time_msec();
+            playout_cuda(tmp);
+            end = get_time_msec();
+            elapsed_cuda = end - start;
         }
+        extern double total_cuda, total_cpu;
+        total_cuda += elapsed_cuda;
+        total_cpu += elapsed_cpu;
+        
+        // printf("%.3f, %.3f\n", elapsed_cpu, elapsed_cuda);
         
         w += value;
         n++;

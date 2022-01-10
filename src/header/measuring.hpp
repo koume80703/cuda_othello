@@ -9,7 +9,7 @@
 #define CUDA_PLAYOUT true
 #define BASIC_OUTPUT false
 
-#define N_PLAYOUT 1
+#define N_PLAYOUT 512
 #define N_SIMULATION 100
 #define EXPAND_BASE 20
 

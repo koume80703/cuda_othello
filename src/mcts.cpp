@@ -8,18 +8,24 @@ void MCTS::train(Node &root_node, int simulation)
     root_node.expand();
 
     printf("%2d, ", root_node.get_state().game.get_turn());
-    double start, end, elapsed;
-    start = get_time_msec();
+    // double start, end, elapsed;
+    // start = get_time_msec();
+
+    extern double total_cuda, total_cpu;
+    total_cuda = 0;
+    total_cpu = 0;
     
     for (int i = 0; i < simulation; i++)
     {
         root_node.evaluate();
     }
     
-    end = get_time_msec();
-    elapsed = end - start;
+    // end = get_time_msec();
+    // elapsed = end - start;
 
-    printf("%3.3f [ms]\n", elapsed / simulation);
+    // printf("%3.3f [ms]\n", elapsed / simulation);
+
+    printf("%7.3f, %7.3f\n", total_cuda / simulation, total_cpu / simulation);
 }
 
 pair<int, int> MCTS::select_action(Node &root_node)

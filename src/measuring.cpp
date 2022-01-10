@@ -4,6 +4,7 @@
 double playout_time;
 
 double malloc_time, exe_time, others_time;
+double total_cuda, total_cpu;
 
 double get_time_msec()
 {

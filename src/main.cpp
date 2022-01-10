@@ -64,7 +64,7 @@ int main(void)
 
     for (int i = 0; i < play_num; i++)
     {
-        cout << "play: " << i << endl;
+        cout << "play: " << i << "    ([ms])" << endl;
         int result = play_othello();
         cout << endl;
         if (result == 0)
