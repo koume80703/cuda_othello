@@ -4,7 +4,7 @@
 #include "header/playout_cuda.cuh"
 #include "header/measuring.hpp"
 
-Node::Node(State s, int eb = 20)
+Node::Node(State s, PLAYER bp, int eb = 20)
 {
     state = s;
 
@@ -12,13 +12,14 @@ Node::Node(State s, int eb = 20)
     n = 0;
     expand_base = eb;
     children = vector<Node>();
+    base_player = bp;
 }
 
 float Node::evaluate()
 {
     if (state.is_done())
     {
-        float value = (state.is_lose()) ? -1 : 0;
+        float value = (state.is_lose(base_player)) ? -1 : 0;
         w += value;
         n++;
         return value;
@@ -31,41 +32,60 @@ float Node::evaluate()
         float value = 0;
 
         double start, end, elapsed_cuda, elapsed_cpu;
+        extern int n_playout;
         if (CUDA_PLAYOUT)
         {
-            start = get_time_msec();
-            value += playout_cuda(tmp);
-            end = get_time_msec();
-            elapsed_cuda = end - start;
-
-            start = get_time_msec();
-            for (int i = 0; i < N_PLAYOUT; i++)
+            if (TIME_OUTPUT)
             {
-                Node::playout(tmp);
+                start = get_time_msec();
             }
-            end = get_time_msec();
-            elapsed_cpu = end - start;
+            
+            value += playout_cuda(tmp, base_player);
+            
+            if (TIME_OUTPUT)
+            {
+                end = get_time_msec();
+                elapsed_cuda = end - start;
+
+                start = get_time_msec();
+                for (int i = 0; i < n_playout; i++)
+                {
+                    Node::playout(tmp, base_player);
+                }
+                end = get_time_msec();
+                elapsed_cpu = end - start;
+            }
         }
         else
         {
-            start = get_time_msec();
-            for (int i = 0; i < N_PLAYOUT; i++)
+            if (TIME_OUTPUT)
             {
-                value += Node::playout(tmp);
+                start = get_time_msec();
             }
-            end = get_time_msec();
-            elapsed_cpu = end - start;
-
-            start = get_time_msec();
-            playout_cuda(tmp);
-            end = get_time_msec();
-            elapsed_cuda = end - start;
+            
+            for (int i = 0; i < n_playout; i++)
+            {
+                value += Node::playout(tmp, base_player);
+            }
+            
+            if (TIME_OUTPUT)
+            {
+                end = get_time_msec();
+                elapsed_cpu = end - start;
+                
+                start = get_time_msec();
+                playout_cuda(tmp, base_player);
+                end = get_time_msec();
+                elapsed_cuda = end - start;
+            }
         }
-        extern double total_cuda, total_cpu;
-        total_cuda += elapsed_cuda;
-        total_cpu += elapsed_cpu;
-        
-        // printf("%.3f, %.3f\n", elapsed_cpu, elapsed_cuda);
+
+        if (TIME_OUTPUT)
+        {
+            extern double total_cuda, total_cpu;
+            total_cuda += elapsed_cuda;
+            total_cpu += elapsed_cpu;
+        }
         
         w += value;
         n++;
@@ -96,7 +116,7 @@ void Node::expand()
     }
     for (auto action : state.legal_actions())
     {
-        children.push_back(Node(state.next(action), expand_base));
+        children.push_back(Node(state.next(action), base_player, expand_base));
     }
 }
 
@@ -125,15 +145,15 @@ Node &Node::next_child_based_ucb()
     return children.at(argmax(ucb1_values));
 }
 
-float Node::playout(State state)
+float Node::playout(State state, PLAYER base_player)
 {
     if (state.is_done())
     {
-        if (state.is_win())
+        if (state.is_win(base_player))
         {
             return 1;
         }
-        else if (state.is_lose())
+        else if (state.is_lose(base_player))
         {
             return -1;
         }
@@ -145,11 +165,11 @@ float Node::playout(State state)
     if (state.legal_actions().empty())
     {
         state = state.pass_moving();
-        return Node::playout(state);
+        return Node::playout(state, base_player);
     }
     else
     {
-        return Node::playout(state.next(state.random_action()));
+        return Node::playout(state.next(state.random_action()), base_player);
     }
 }
 

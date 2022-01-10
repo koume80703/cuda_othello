@@ -4,25 +4,12 @@ __global__ void kernel(STATE_CUDA *sc, float *result, int seed)
 {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
 
-    /*
-    sc[idx].turn = sc[0].turn;
-    sc[idx].player = sc[0].player;
-    sc[idx].winner = sc[0].winner;
-    sc[idx].start_player = sc[0].start_player;
-    sc[idx].was_passed = sc[0].was_passed;
-
-    for (int y = 0; y < BOARD_SIZE+2; y++){
-        for (int x = 0; x < BOARD_SIZE+2; x++){
-            sc[idx].board[y][x] = sc[0].board[y][x];
-        }
-    }
-    */
 
     STATE_CUDA sc_dst;
     sc_dst.turn = sc->turn;
     sc_dst.player = sc->player;
     sc_dst.winner = sc->winner;
-    sc_dst.start_player = sc->start_player;
+    sc_dst.base_player = sc->base_player;
     sc_dst.was_passed = sc->was_passed;
 
     for (int y = 0; y < BOARD_SIZE + 2; y++)
@@ -95,8 +82,7 @@ __device__ bool is_draw(STATE_CUDA *sc)
 
 __device__ bool is_win(STATE_CUDA *sc)
 {
-    return !is_draw(sc) && sc->winner == START_PLAYER;
-    // default: START_PLAYER = 1 (means black)
+    return !is_draw(sc) && sc->winner == sc->base_player;
 }
 
 __device__ bool is_lose(STATE_CUDA *sc)

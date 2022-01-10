@@ -19,7 +19,7 @@ typedef struct _STATE_CUDA
   */
 
   int turn;
-  int player, winner, start_player;
+  int player, winner, base_player;
   /*
   WHITE = -1, BLACK = 1, DRAW = 0, NONE = -255
   */
@@ -27,7 +27,7 @@ typedef struct _STATE_CUDA
   bool was_passed;
 } STATE_CUDA;
 
-void trans_data(State state, STATE_CUDA *dfc);
+void trans_data(State state, PLAYER base_player, STATE_CUDA *dfc);
 void trans_board(Board board, int bArray[][BOARD_SIZE + 2]);
 int player_to_int(PLAYER p);
 int board_state_to_int(BOARD_STATE bs);

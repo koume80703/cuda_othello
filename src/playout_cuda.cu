@@ -2,18 +2,19 @@
 #include "header/kernel.cuh"
 #include "header/measuring.hpp"
 
-float playout_cuda(State state)
+float playout_cuda(State state, PLAYER base_player)
 {
     double start, tmp, elapsed;
     start = get_time_msec();
 
-    int nElem = N_PLAYOUT;
+    extern int n_playout;
+    int nElem = (base_player == PLAYER::BLACK) ? n_playout : n_playout*4;
     size_t size_sc = sizeof(STATE_CUDA);
     size_t size_result = nElem * sizeof(float);
 
     STATE_CUDA *h_sc, *d_sc;
     h_sc = (STATE_CUDA *)malloc(size_sc);
-    trans_data(state, h_sc);
+    trans_data(state, base_player, h_sc);
 
     CHECK(cudaMalloc((STATE_CUDA **)&d_sc, size_sc));
 

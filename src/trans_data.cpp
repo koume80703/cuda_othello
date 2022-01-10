@@ -1,6 +1,6 @@
 #include "header/trans_data.hpp"
 
-void trans_data(State state, STATE_CUDA *sc)
+void trans_data(State state, PLAYER base_player, STATE_CUDA *sc)
 {
     Game game = state.game;
     Board board = game.get_board();
@@ -11,7 +11,7 @@ void trans_data(State state, STATE_CUDA *sc)
     sc->player = player_to_int(game.get_current_player());
     sc->winner = -255; // PLAYER::NONE
     sc->was_passed = game.get_was_passed();
-    sc->start_player = START_PLAYER;
+    sc->base_player = player_to_int(base_player);
 
     // show_board(sc->board);
 

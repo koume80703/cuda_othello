@@ -41,8 +41,8 @@ public:
     vector<int> get_stone_num();
     void finish_game();
 
-    bool is_win();
-    bool is_lose();
+    bool is_win(PLAYER base_player);
+    bool is_lose(PLAYER base_player);
     bool is_draw();
     bool is_first_player();
     void show_board();

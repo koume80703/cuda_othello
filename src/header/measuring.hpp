@@ -7,11 +7,14 @@
 #include <ctime>
 
 #define CUDA_PLAYOUT true
-#define BASIC_OUTPUT false
+#define BASIC_OUTPUT true
+#define TIME_OUTPUT false
+#define MESURING_STRENGTH true
 
-#define N_PLAYOUT 512
+#define N_PLAYOUT 1024
 #define N_SIMULATION 100
 #define EXPAND_BASE 20
+
 
 using namespace std;
 using namespace std::chrono;
