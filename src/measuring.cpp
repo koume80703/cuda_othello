@@ -6,6 +6,8 @@ double playout_time;
 double malloc_time, exe_time, others_time;
 double total_cuda, total_cpu;
 
+int n_playout;
+
 double get_time_msec()
 {
     return static_cast<double>(duration_cast<nanoseconds>(steady_clock::now().time_since_epoch()).count()) / (1000 * 1000);

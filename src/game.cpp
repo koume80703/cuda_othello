@@ -179,14 +179,14 @@ void Game::finish_game()
     }
 }
 
-bool Game::is_win()
+bool Game::is_win(PLAYER base_player)
 {
-    return !is_draw() && START_PLAYER == winner;
+    return !is_draw() &&  base_player == winner;
 }
 
-bool Game::is_lose()
+bool Game::is_lose(PLAYER base_player)
 {
-    return !is_win();
+    return !is_win(base_player);
 }
 
 bool Game::is_draw()

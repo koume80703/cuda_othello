@@ -1,6 +1,18 @@
 #include "header/main.hpp"
 #include "header/measuring.hpp"
 
+pair<int,int> mcts_action(State state, PLAYER base_player, int expand_base, int simulation)
+{
+    Node root_node = Node(state, base_player, expand_base);
+    MCTS::train(root_node, simulation);
+    return MCTS::select_action(root_node);
+}
+
+pair<int, int> random_action(State state)
+{
+    return state.random_action();
+}
+
 int play_othello()
 {
     Game game;
@@ -18,7 +30,7 @@ int play_othello()
             {
                 return 0;
             }
-            else if (state.is_lose())
+            else if (state.is_lose(PLAYER::BLACK))
             {
                 return -1;
             }
@@ -37,52 +49,86 @@ int play_othello()
         pair<int, int> action;
         if (state.is_first_player())
         {
-            int simulation = N_SIMULATION;
-            Node root_node = Node(state, EXPAND_BASE);
-            MCTS::train(root_node, simulation);
-            action = MCTS::select_action(root_node);
+            action = mcts_action(state, PLAYER::BLACK, EXPAND_BASE, N_SIMULATION);
             state = state.next(action);
         }
         else
         {
-            action = state.random_action();
+            action = mcts_action(state, PLAYER::WHITE, EXPAND_BASE, N_SIMULATION);
             state = state.next(action);
         }
     }
 }
 
 int main(void)
-{    
-    int win = 0, lose = 0, draw = 0;
-    const int play_num = 10;
-
-    
+{
     time_t time = system_clock::to_time_t(system_clock::now());
     cout << "Starting program at " << ctime(&time) << endl;
-    cout << "CUDA_PLAYOUT: " << CUDA_PLAYOUT << ", N_PLAYOUT: " << N_PLAYOUT << endl;
-    cout << "N_SIMULATION: " << N_SIMULATION << ", EXPAND_BASE: " << EXPAND_BASE << endl << endl;
+    cout << "Parameter: CUDA_PLAYOUT, n_playout, N_SIMULATION, EXPAND_BASE" << endl << endl;
 
-    for (int i = 0; i < play_num; i++)
+    extern int n_playout;
+    if (MESURING_STRENGTH)
     {
-        cout << "play: " << i << "    ([ms])" << endl;
-        int result = play_othello();
+        int win = 0, lose = 0, draw = 0;
+        const int play_num = 1;
+        n_playout = 1024;
+    
+        printf("Parameter, %d, %d, %d, %d\n", CUDA_PLAYOUT, n_playout, N_SIMULATION, EXPAND_BASE);
+
+        for (int i = 0; i < play_num; i++)
+        {
+            cout << "play, " << i << endl;
+            int result = play_othello();
+            cout << endl;
+            if (result == 0)
+                draw++;
+            else if (result == 1)
+                win++;
+            else
+                lose++;
+        }
+
+        if (BASIC_OUTPUT)
+        {
+            cout << "black: " << win << endl;
+            cout << "white: " << lose << endl;
+            cout << "draw: " << draw << endl;
+        }
+
         cout << endl;
-        if (result == 0)
-            draw++;
-        else if (result == 1)
-            win++;
-        else
-            lose++;
     }
-
-    if (BASIC_OUTPUT)
+    else
     {
-        cout << "win: " << win << endl;
-        cout << "lose: " << lose << endl;
-        cout << "draw: " << draw << endl;
-    }
 
-    cout << endl;
+        for (n_playout = 2; n_playout < 256; n_playout *= 2){
+            int win = 0, lose = 0, draw = 0;
+            const int play_num = 5;
+    
+            printf("Parameter, %d, %d, %d, %d\n", CUDA_PLAYOUT, n_playout, N_SIMULATION, EXPAND_BASE);
+
+            for (int i = 0; i < play_num; i++)
+            {
+                cout << "play, " << i << endl;
+                int result = play_othello();
+                cout << endl;
+                if (result == 0)
+                    draw++;
+                else if (result == 1)
+                    win++;
+                else
+                    lose++;
+            }
+
+            if (BASIC_OUTPUT)
+            {
+                cout << "win: " << win << endl;
+                cout << "lose: " << lose << endl;
+                cout << "draw: " << draw << endl;
+            }
+
+            cout << endl;
+        }
+    }
 
     time = system_clock::to_time_t(system_clock::now());
     cout << "Program end at " << ctime(&time) << endl;

@@ -52,14 +52,14 @@ PLAYER State::winner()
     return game.get_winner();
 }
 
-bool State::is_win()
+bool State::is_win(PLAYER base_player)
 {
-    return game.is_win();
+    return game.is_win(base_player);
 }
 
-bool State::is_lose()
+bool State::is_lose(PLAYER base_player)
 {
-    return game.is_lose();
+    return game.is_lose(base_player);
 }
 
 bool State::is_draw()

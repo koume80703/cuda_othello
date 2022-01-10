@@ -19,4 +19,4 @@ using namespace std::chrono;
         }                                                 \
     } while (0);
 
-float playout_cuda(State state);
+float playout_cuda(State state, PLAYER base_player);
