@@ -1,0 +1,2411 @@
+Starting program at Wed Jan 12 16:36:07 2022
+
+Parameter: CUDA_PLAYOUT, n_playout, N_SIMULATION, EXPAND_BASE
+
+Parameter, 1, 1, 100, 20
+play, 0
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b w w w w w w w . 
+. b w w w w w w w . 
+. b w w w w w w w . 
+. b w b w b w w w . 
+. b b w b w b w w . 
+. b w b b b w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 49
+BLACK: 15
+
+play, 1
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w b w w w w . 
+. w w b w w w w w . 
+. w w b w w w w b . 
+. w w w b w w w b . 
+. w w w w w w w b . 
+. w w w w w w b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 55
+BLACK: 9
+
+play, 2
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w b w w w w w . 
+. w w b w b w b w . 
+. w w b w w b w w . 
+. w w b w b w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w b w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 55
+BLACK: 9
+
+play, 3
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w b b w b w w . 
+. w w w b w w b w . 
+. w w w w b b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 57
+BLACK: 7
+
+play, 4
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w b b b b b b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 58
+BLACK: 6
+
+play, 5
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w b b w w w w . 
+. w w w w w w w w . 
+. w w b w w b w w . 
+. w w w w b w b w . 
+. w w w b w b w w . 
+. w w w w b w w w . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 54
+BLACK: 10
+
+play, 6
+----------------------------------------
+. . . . . . . . . . 
+. w w w w b b w w . 
+. w w w b b b w w . 
+. w b b b w b w w . 
+. w b w b w w w w . 
+. w b b b b w w w . 
+. w b w b w w w w . 
+. b b b w w w w w . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 43
+BLACK: 21
+
+play, 7
+----------------------------------------
+. . . . . . . . . . 
+. w b w w w w w w . 
+. w b w w w w w w . 
+. w w w b w w w w . 
+. w w w w w w w w . 
+. w w b b w b w w . 
+. w w w b w w b w . 
+. w w b w b b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 53
+BLACK: 11
+
+play, 8
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w * * . 
+. w w w w w w * * . 
+. w w w w w w * * . 
+. w w w w w w * * . 
+. w w w w w w * b . 
+. w w w w w w b b . 
+. w w w w * w * b . 
+. w w w w w w w * . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 48
+BLACK: 16
+
+play, 9
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b b . 
+. b b b b b w b b . 
+. b b b b w w w w . 
+. b w b w w b w w . 
+. b w w b w w w w . 
+. b w w w w w w w . 
+. b b b b b w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 34
+BLACK: 30
+
+play, 10
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b w w w . 
+. w w w b w b w w . 
+. w w w w w w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 59
+BLACK: 5
+
+play, 11
+----------------------------------------
+. . . . . . . . . . 
+. b b b * * * * * . 
+. b b b * * * * * . 
+. * * w w w * * w . 
+. * * w w w w w w . 
+. w * w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 41
+BLACK: 23
+
+play, 12
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. b w w b b w w w . 
+. w b b b b b w w . 
+. w w b w w b b w . 
+. w w w w b b b w . 
+. w w w w b b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 48
+BLACK: 16
+
+play, 13
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w b b w w . 
+. w w w b b w w w . 
+. w w w b w w w w . 
+. w w w w w b w w . 
+. w w w b b b w w . 
+. w w w w b b w w . 
+. b b b b b b w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 47
+BLACK: 17
+
+play, 14
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w b w w w w w . 
+. w w b w w w w w . 
+. w w b w w b b w . 
+. w b b w w w b w . 
+. b b b b b b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 50
+BLACK: 14
+
+play, 15
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w b w w w . 
+. w w w b w b w w . 
+. w w b b b b b b . 
+. w w w b w w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b b b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 50
+BLACK: 14
+
+play, 16
+----------------------------------------
+. . . . . . . . . . 
+. b b b b w w w w . 
+. w w w w w w w w . 
+. w w w b w w w w . 
+. w w w w b w w w . 
+. w w w b b w w w . 
+. w w b b b w w w . 
+. w w b b b w w w . 
+. w w b b b w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 47
+BLACK: 17
+
+play, 17
+----------------------------------------
+. . . . . . . . . . 
+. b b b w w w w w . 
+. b b b w w w w w . 
+. b w w w w w w w . 
+. b w b b w w w w . 
+. b w b b b w w w . 
+. w w w b w w w w . 
+. w w b w b w w w . 
+. w w w w w b b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 45
+BLACK: 19
+
+play, 18
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b w . 
+. w b b b w b b b . 
+. w w w w b w w b . 
+. w w w b w w b w . 
+. w w b w b w w w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 44
+BLACK: 20
+
+play, 19
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w b b w w . 
+. w w w w b b w w . 
+. w w w w b b w w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. b b b b b b * w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 50
+BLACK: 14
+
+play, 20
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w b w w w w w w . 
+. w b w w w w w w . 
+. w w w b w w w w . 
+. w w w b b w w w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 57
+BLACK: 7
+
+play, 21
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w b w w w w w w . 
+. w w b w b w b w . 
+. w b w b w w w w . 
+. w w b w w b w w . 
+. w w w w b b w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 54
+BLACK: 10
+
+play, 22
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w w b w b . 
+. w w w w b w b b . 
+. w w w w w b w b . 
+. w w b w w b b b . 
+. w w w b b b b b . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 45
+BLACK: 19
+
+play, 23
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b w . 
+. w w w w w w w w . 
+. w w b w b b w w . 
+. w w w b w w b w . 
+. w w b w w w w w . 
+. w b b w b b b b . 
+. w w w b w w w b . 
+. w w b b b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 37
+BLACK: 27
+
+play, 24
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b w w w w w w w . 
+. b w b w b b w w . 
+. b b w b b w w w . 
+. b w b w w w w w . 
+. b b w w w w w w . 
+. b b b w w b b w . 
+. b b b w b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 38
+BLACK: 26
+
+play, 25
+----------------------------------------
+. . . . . . . . . . 
+. b b b b w w w w . 
+. b w b b w w w w . 
+. b b b b w w w w . 
+. b b b w w w w w . 
+. b b b w w w w w . 
+. b b w b w w w w . 
+. b b w b b w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 40
+BLACK: 24
+
+play, 26
+----------------------------------------
+. . . . . . . . . . 
+. w w b b w w w b . 
+. w w w b b b b b . 
+. w w w w w b w b . 
+. w w w w w w w w . 
+. w w w w w w b w . 
+. w w w w w b b w . 
+. b w w b b b b w . 
+. w w w w b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 42
+BLACK: 22
+
+play, 27
+----------------------------------------
+. . . . . . . . . . 
+. b b w w w w w w . 
+. b b w w w w w w . 
+. b b w b w w w w . 
+. b b w w w w w w . 
+. b b w w w w w w . 
+. b b w w w w w w . 
+. w w b w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 50
+BLACK: 14
+
+play, 28
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w b w w w w . 
+. w b b w w b w w . 
+. w b w w w w w w . 
+. w b w b w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 57
+BLACK: 7
+
+play, 29
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w b b w w w w . 
+. w w b b b w b w . 
+. w w w w b b w w . 
+. w w w w w w b w . 
+. w w b w b b w w . 
+. w w w w w w w w . 
+. b w b b b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 45
+BLACK: 19
+
+play, 30
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. b b b b b w w w . 
+. w b w b w w w w . 
+. w w w w w w w w . 
+. w w w b w w w w . 
+. w w w w b w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 55
+BLACK: 9
+
+play, 31
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w w b w b . 
+. w w w b b w b b . 
+. w w b b w w w w . 
+. w w b w w w w w . 
+. b b b b b b b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 45
+BLACK: 19
+
+play, 32
+----------------------------------------
+. . . . . . . . . . 
+. b w w b b b b b . 
+. b w w b b b w b . 
+. w w w b w w w b . 
+. w w b b w b w b . 
+. w w w w w w w b . 
+. w w b b w b w b . 
+. w w w b b w w w . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 39
+BLACK: 25
+
+play, 33
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w b b w b b . 
+. w w b w w w w w . 
+. b b w b w w w w . 
+. b b w w w w w w . 
+. b b w w w w w w . 
+. b b b w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 49
+BLACK: 15
+
+play, 34
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w w w b b . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w b b b b w b . 
+. w b w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 35
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b w w w w w w w . 
+. b w b w b w w w . 
+. b w w w w w w w . 
+. b b w w w w w w . 
+. b w b w w w w w . 
+. b b b b w w w w . 
+. b b b w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 47
+BLACK: 17
+
+play, 36
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w b b b w b b . 
+. w w b b w b w b . 
+. w w b b w b b b . 
+. w w b b b b b b . 
+. w b w b w w w w . 
+. w w b b w w w w . 
+. w w w b w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 39
+BLACK: 25
+
+play, 37
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b b . 
+. b b b b b b b b . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 47
+BLACK: 17
+
+play, 38
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b b . 
+. w w w b b w b w . 
+. w w b w w b b w . 
+. w b w w w w w w . 
+. w w b w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 48
+BLACK: 16
+
+play, 39
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w b w w w b w . 
+. w w w w w b w w . 
+. w w b w b w w w . 
+. b w w b b b b b . 
+. w w w w b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 48
+BLACK: 16
+
+play, 40
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w b b w w w . 
+. w w w w b b w w . 
+. w w b b w w b w . 
+. b w b w b b w w . 
+. b b w b b w w w . 
+. b w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 48
+BLACK: 16
+
+play, 41
+----------------------------------------
+. . . . . . . . . . 
+. w w w b b b b b . 
+. w w w w w b w b . 
+. w w w w w w b b . 
+. w w w w b b w b . 
+. w w w b w w w w . 
+. w w b w b w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 49
+BLACK: 15
+
+play, 42
+----------------------------------------
+. . . . . . . . . . 
+. w w w b b b b w . 
+. w w w w b b w w . 
+. w w w w w b b w . 
+. w w w b b w b w . 
+. w w w w b w w w . 
+. w w w b w b w w . 
+. w w w w b b w w . 
+. b b b b b b w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 41
+BLACK: 23
+
+play, 43
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w w w b w w w . 
+. w b w w b w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 60
+BLACK: 4
+
+play, 44
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w b b b w w . 
+. w w w w b w b w . 
+. w w w w w b w w . 
+. w w w w w w b w . 
+. b b b b b b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 51
+BLACK: 13
+
+play, 45
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b w w w . 
+. w w w b w w w w . 
+. w w b w w w w w . 
+. b b b b b b b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 54
+BLACK: 10
+
+play, 46
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b b b b . 
+. w w w b w w w w . 
+. w w b w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 58
+BLACK: 6
+
+play, 47
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w b w w w . 
+. w w w w b w w w . 
+. w w w w b w w w . 
+. w w w w b w w w . 
+. w w b w b w w w . 
+. w w w b b w w w . 
+. w w w w b w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 55
+BLACK: 9
+
+play, 48
+----------------------------------------
+. . . . . . . . . . 
+. b b b w w w w w . 
+. w w w b w w w w . 
+. w w b b b w w w . 
+. w b w b w w w w . 
+. w w b w w w w w . 
+. w w w b w w w w . 
+. w w b w b w w b . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 49
+BLACK: 15
+
+play, 49
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w b b w b . 
+. w w w b b w w w . 
+. w w w b b b w w . 
+. b b b b b b w b . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 46
+BLACK: 18
+
+play, 50
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b w . 
+. b b b w w b b w . 
+. b b w b b w b w . 
+. b b w b b w b w . 
+. w b b b w w b w . 
+. w b b b w b b w . 
+. w b b w w w b w . 
+. b b b b b b b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 23
+BLACK: 41
+
+play, 51
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w * . 
+. w w w w w w w * . 
+. w w w w w w * * . 
+. w w w w * w * * . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 57
+BLACK: 7
+
+play, 52
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b w . 
+. w w w b b b b b . 
+. w w b w b w b w . 
+. w w w w w w w w . 
+. b b w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 47
+BLACK: 17
+
+play, 53
+----------------------------------------
+. . . . . . . . . . 
+. b b b w w w w b . 
+. w b b w w w w b . 
+. b b b w b w w b . 
+. b b b w w b w b . 
+. b b b b b b b b . 
+. w w b b w w w b . 
+. w w w w w w w b . 
+. b w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 34
+BLACK: 30
+
+play, 54
+----------------------------------------
+. . . . . . . . . . 
+. w b b w w w w w . 
+. w w b w w w w w . 
+. w w w b w w w w . 
+. w w w w b w w w . 
+. w w w w b b w w . 
+. w w w w b w b w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 54
+BLACK: 10
+
+play, 55
+----------------------------------------
+. . . . . . . . . . 
+. w w w w b w w w . 
+. w w b b b b w w . 
+. w w w w w b b w . 
+. w w w w b b b w . 
+. w w w w w b b w . 
+. w w b w w w b w . 
+. w w w b w b w w . 
+. w w w w b b w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 46
+BLACK: 18
+
+play, 56
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w b w . 
+. b b w w w w w w . 
+. w w b w b w w w . 
+. w w w b b b w w . 
+. w w w w b w b w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 53
+BLACK: 11
+
+play, 57
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b w w w . 
+. w b b b w b w w . 
+. w w b w b w b w . 
+. w w w w w b w w . 
+. w w w b b w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w b w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 47
+BLACK: 17
+
+play, 58
+----------------------------------------
+. . . . . . . . . . 
+. b b b b w w w w . 
+. w w w w w w w w . 
+. w w w b w w w w . 
+. w w b w w w w w . 
+. w w b w w w w w . 
+. w w b b w w w w . 
+. w w b w b b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 59
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w b w w w w w . 
+. w w b w b b w w . 
+. w w w b w w b w . 
+. w w b b b b b b . 
+. w b b b b w b b . 
+. w w w w w w w b . 
+. b w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 43
+BLACK: 21
+
+play, 60
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w * . 
+. w w w w w w w w . 
+. w w w w w w w * . 
+. w w w w w w w * . 
+. w w w w w w w w . 
+. w w w w w w w * . 
+. w w w w w w w * . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 59
+BLACK: 5
+
+play, 61
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b b . 
+. b w w w b w b w . 
+. b w b w w b b w . 
+. b w b b b w b w . 
+. b w w b w b w w . 
+. b b b b b b b w . 
+. w b b b b b b b . 
+. w b b b b b w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 21
+BLACK: 43
+
+play, 62
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b w w w w w w w . 
+. w w b w w w w w . 
+. w w b b w w w w . 
+. w b w b b b w w . 
+. w w w w b w b w . 
+. w w w w w b b b . 
+. w w w w w w b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 48
+BLACK: 16
+
+play, 63
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w w w b b b b . 
+. w w w w w b w w . 
+. w w w w b w w w . 
+. w w w b w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 55
+BLACK: 9
+
+play, 64
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w b w w w b w . 
+. w b w w w b b w . 
+. w w b w w b b w . 
+. w w w w w w w w . 
+. b w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 55
+BLACK: 9
+
+play, 65
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w b w w w w w w . 
+. w w b w w w w w . 
+. w b b b w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 57
+BLACK: 7
+
+play, 66
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b b . 
+. w w w w w w b b . 
+. w w w b b b b b . 
+. w w w w w b b b . 
+. w w w w b b b b . 
+. w w w b w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 41
+BLACK: 23
+
+play, 67
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w b b b w w . 
+. w b w w w b w w . 
+. w w b w w b b w . 
+. w w w b w w b w . 
+. w w w b w b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 68
+----------------------------------------
+. . . . . . . . . . 
+. b b b b w b b w . 
+. b w w w w w w w . 
+. w w w b b b w w . 
+. w w b b w w b b . 
+. w w w b w w w w . 
+. w b w b w w w w . 
+. b b b w b b w w . 
+. w b w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 41
+BLACK: 23
+
+play, 69
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w w b w b . 
+. w w w w b w b b . 
+. w w w b w b w b . 
+. w w b w b w b b . 
+. b b b b b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 41
+BLACK: 23
+
+play, 70
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. b b b b b b w w . 
+. w b b b w w w w . 
+. w w b w w b w w . 
+. w w b w b w w w . 
+. w b b b w w w w . 
+. w w b w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 47
+BLACK: 17
+
+play, 71
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b b . 
+. b b b b w b w b . 
+. b b w w b b b b . 
+. b b w w w b b b . 
+. w b w w b b b w . 
+. w b b b w b w w . 
+. w b b b b w w w . 
+. w b w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 26
+BLACK: 38
+
+play, 72
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b w w . 
+. b b b b b b b b . 
+. b w w b w w b w . 
+. b w w w w b w w . 
+. w w w w w b w w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 43
+BLACK: 21
+
+play, 73
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w b w b w w w . 
+. w w w w w b w w . 
+. w w w w b w b w . 
+. w w w b w w b b . 
+. w w w w w w b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 55
+BLACK: 9
+
+play, 74
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w b b w b w . 
+. w w b w w b w w . 
+. w w w w w w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 58
+BLACK: 6
+
+play, 75
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w b w w w w w . 
+. w b b w w w w w . 
+. w w b w b w w w . 
+. w w w b w w b w . 
+. w w w w b b w w . 
+. w b b b b b w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 50
+BLACK: 14
+
+play, 76
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w * * . 
+. w w w w w w * * . 
+. w w w w w w * * . 
+. w w w w w w * * . 
+. w w w w w w * w . 
+. w w w w w w w * . 
+. w w w w w w * b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 77
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. b w w w w w w w . 
+. b b b b w b w w . 
+. w w w b w w b b . 
+. w w b w w w w w . 
+. w b b b w b w w . 
+. w b w w b w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 48
+BLACK: 16
+
+play, 78
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w w w b w b w . 
+. w w w b w b w w . 
+. w w w w b w w w . 
+. b b b b b b w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 51
+BLACK: 13
+
+play, 79
+----------------------------------------
+. . . . . . . . . . 
+. b b b w w w w w . 
+. w w w w w w w w . 
+. w w w w b b b b . 
+. w w w w b w b w . 
+. w w w w b w b w . 
+. w w w w b w w w . 
+. w w w w b w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 51
+BLACK: 13
+
+play, 80
+----------------------------------------
+. . . . . . . . . . 
+. w b w w w w w w . 
+. w b w w w w w b . 
+. w b w w b w w b . 
+. w b w w w w w b . 
+. w b b b b b b b . 
+. w w b b b w w w . 
+. w w w b w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 45
+BLACK: 19
+
+play, 81
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b b . 
+. w w b b w w b b . 
+. w w w b b b w b . 
+. w w w w b b b b . 
+. w w w w w b b b . 
+. w w w w w w b b . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 37
+BLACK: 27
+
+play, 82
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. w w w w w w b b . 
+. w b w b b b w b . 
+. w w w w w b w b . 
+. w w w w b w b b . 
+. b b w b w b b b . 
+. b w w w b w b b . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 40
+BLACK: 24
+
+play, 83
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. w w w w b w b w . 
+. w w w w w b b w . 
+. w w w w w b w w . 
+. w w w w w w b w . 
+. w w w w w b b w . 
+. w w w w w w w w . 
+. b b b b b b b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 48
+BLACK: 16
+
+play, 84
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w b b b b b w w . 
+. w b b w b w w w . 
+. w b w b b b w w . 
+. w w b w b w w w . 
+. w w b b w w w w . 
+. w w b w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 47
+BLACK: 17
+
+play, 85
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b w w b w w w w . 
+. w w w w w w w w . 
+. w w b b w w w w . 
+. w w w w b b w w . 
+. w w w w b w b w . 
+. w w w w b b w w . 
+. w w w w b w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 86
+----------------------------------------
+. . . . . . . . . . 
+. w w w w b w w w . 
+. w w w b w w w w . 
+. w w b w w w w w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. w w w b b w w w . 
+. b b b b b b b w . 
+. w b b w b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 45
+BLACK: 19
+
+play, 87
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b b . 
+. b w w w b w w w . 
+. w w w w w b w w . 
+. w w w w w w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 51
+BLACK: 13
+
+play, 88
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w b b b b w . 
+. w w b w w b b w . 
+. w b w w w b w w . 
+. w w b w b w w w . 
+. w b w b w b w w . 
+. b b b w b w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 46
+BLACK: 18
+
+play, 89
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w b w . 
+. w w w w b b b b . 
+. w w b w b b b b . 
+. w w b b w b b b . 
+. w b b b b w b b . 
+. w b w b b w w w . 
+. w w w w w b w w . 
+. b b w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 37
+BLACK: 27
+
+play, 90
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w b b w w . 
+. w w w w b b b b . 
+. w w w b b w w b . 
+. w w w b w w w w . 
+. w w b w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 53
+BLACK: 11
+
+play, 91
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w b w . 
+. w w w w w b w w . 
+. w w w w b w w w . 
+. w w w b b w w w . 
+. w w b b w b w w . 
+. w w w b b w b b . 
+. w w w w w w b b . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 50
+BLACK: 14
+
+play, 92
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w b w w w w w . 
+. w w b w w w w w . 
+. w w w b b b w w . 
+. w w w w b w b w . 
+. w w w w w w w b . 
+. w w w w w w b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 54
+BLACK: 10
+
+play, 93
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b w . 
+. b b b b b b w w . 
+. b b w b b b w w . 
+. b w w b w w w w . 
+. b w w w w w w w . 
+. b b w w w w w w . 
+. b b w w w w w w . 
+. w b w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 38
+BLACK: 26
+
+play, 94
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w * w * . 
+. w w w w w w w w . 
+. w w w w w * w * . 
+. w w w w w w w w . 
+. w w w w w * w * . 
+. w w w w w w w * . 
+. w w w * w * w * . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 54
+BLACK: 10
+
+play, 95
+----------------------------------------
+. . . . . . . . . . 
+. b b b b w w w w . 
+. b b b w w w w w . 
+. b b b b b w w w . 
+. b b b b b b w w . 
+. b b w w b w w w . 
+. b b w b w b w w . 
+. b b b w w w w w . 
+. w b w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 35
+BLACK: 29
+
+play, 96
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b w w w w w w w . 
+. b w w w b w w w . 
+. b b w w w w w w . 
+. w w b w w w w w . 
+. w w b b w w w w . 
+. w w w b b b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 97
+----------------------------------------
+. . . . . . . . . . 
+. w b w w w w w w . 
+. w w w w w w w w . 
+. w w w b b w w w . 
+. w w b w b b w w . 
+. w w w w w b w w . 
+. w w b w w w b w . 
+. w w w b b b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 98
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b w w . 
+. w w w w b w b b . 
+. w w w b b b b b . 
+. w w w b w b b b . 
+. w w w w b b b w . 
+. w w w w b b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 41
+BLACK: 23
+
+play, 99
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w * . 
+. w w w w w w w * . 
+. w w w w w w w b . 
+. w w w w w w w * . 
+. w w w w w w w * . 
+. w w w w w w * * . 
+. w w w w w w * * . 
+. w w w w w w * * . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 53
+BLACK: 11
+
+play, 100
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w * . 
+. w w w w w w w b . 
+. w w w w w w w * . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w w w b w w w . 
+. w w w b w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 58
+BLACK: 6
+
+play, 101
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b w . 
+. w w w w b b w w . 
+. w w w b w b w w . 
+. w w b w b b w w . 
+. w w b w w b b w . 
+. w w w b w b b b . 
+. w w w w b b b b . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 38
+BLACK: 26
+
+play, 102
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b b b b b b b w . 
+. b w b b b b b w . 
+. b w w b b w b w . 
+. b w b b b w b w . 
+. b b b b w b b w . 
+. b b b b b b b w . 
+. b b b b b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 20
+BLACK: 44
+
+play, 103
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w b w w w b w . 
+. w w b w b b w w . 
+. w w b b w b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 55
+BLACK: 9
+
+play, 104
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 62
+BLACK: 2
+
+play, 105
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w b b w w . 
+. w w w b w w w w . 
+. w w b b w b w w . 
+. w w b w w b w w . 
+. w w w b b w w w . 
+. w w w b b w w b . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 51
+BLACK: 13
+
+play, 106
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w b b w b w w w . 
+. w b b b w w w w . 
+. w b w b b w w w . 
+. w b w w w w w w . 
+. w b w b w w w w . 
+. w w w w w w w w . 
+. b b w b b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 45
+BLACK: 19
+
+play, 107
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b b b w . 
+. w w w w w w b w . 
+. w w w w w w b w . 
+. w w w w b w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 58
+BLACK: 6
+
+play, 108
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w b b w b b w w . 
+. w b w b w w w w . 
+. w w b w b b w w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 54
+BLACK: 10
+
+play, 109
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w w w b w w w . 
+. w w w b b b w w . 
+. w w w w w w b w . 
+. b b b b b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 50
+BLACK: 14
+
+play, 110
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b w w w . 
+. b b w b b b w w . 
+. b w b w b w w w . 
+. w b w b w w w w . 
+. b w b w w w w w . 
+. b b b w w w w w . 
+. b w w w w w w w . 
+. b w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 42
+BLACK: 22
+
+play, 111
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b b . 
+. w w w w w w b b . 
+. w w w w w b w b . 
+. w w w w b w b b . 
+. w w w b b b b b . 
+. w w b w w w b b . 
+. w w w w w w b b . 
+. b w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 37
+BLACK: 27
+
+play, 112
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b b w w w w w w . 
+. b b w w w w w w . 
+. b b b w w w w w . 
+. b b w w w w w w . 
+. w w b w b b w w . 
+. w w w w w w w w . 
+. w b b w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 49
+BLACK: 15
+
+play, 113
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b w w w . 
+. b b b b w w w w . 
+. b b w w w w b w . 
+. w b w b b w w b . 
+. w w b b b b w w . 
+. w b w w b b w w . 
+. w w w w w w w w . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 40
+BLACK: 24
+
+play, 114
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b w w w . 
+. w w w w b w w w . 
+. w w b w w b w w . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 58
+BLACK: 6
+
+play, 115
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. b w b b b w w w . 
+. w b w b w b w w . 
+. w w w w b w w w . 
+. w w w b w b w w . 
+. w w w w w b w w . 
+. w w w w b b w b . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 48
+BLACK: 16
+
+play, 116
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. b w w w w w w w . 
+. w w b b b w w w . 
+. w w b w w w b w . 
+. w w w b w b b w . 
+. w w w w b b b w . 
+. w w w w w b b w . 
+. w w w w w w b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 49
+BLACK: 15
+
+play, 117
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w b w w . 
+. w w w w w w b w . 
+. w w w w w w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b w w w . 
+. b b b b b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 118
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. b w b b b b w w . 
+. b b w w w w b w . 
+. b b w w w b w w . 
+. w w w w w b w w . 
+. w w w w b w w w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 50
+BLACK: 14
+
+play, 119
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. w w w b w w w w . 
+. w w b w b w w w . 
+. w w w b b b w w . 
+. w w w w b b b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 53
+BLACK: 11
+
+play, 120
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w b w w b w b w . 
+. w w b w b b w w . 
+. w w w b b w b w . 
+. w w w w b b w w . 
+. w w w w w w w w . 
+. w w w w w w b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 51
+BLACK: 13
+
+play, 121
+----------------------------------------
+. . . . . . . . . . 
+. b w b b b b b b . 
+. b w w w w w w w . 
+. b w w w w b w w . 
+. b w w w b b w w . 
+. b w w b b b w w . 
+. b w b w w b w w . 
+. b b b b b b w w . 
+. b w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 37
+BLACK: 27
+
+play, 122
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w * . 
+. w w w w w w w * . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 61
+BLACK: 3
+
+play, 123
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w b w w w w . 
+. w w w b w w w w . 
+. w w w b w w w w . 
+. w w w b b b w w . 
+. w w w b b w w w . 
+. w w w w w w w w . 
+. w w w w w b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 53
+BLACK: 11
+
+play, 124
+----------------------------------------
+. . . . . . . . . . 
+. w w w w b b w w . 
+. w w w b b b w w . 
+. w w w w w w w w . 
+. w w w b b w w w . 
+. w w w w b w b w . 
+. w w b w w b w w . 
+. w w w w w w b w . 
+. w w w w w b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 49
+BLACK: 15
+
+play, 125
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. w w w w b w w b . 
+. w b b b b b w b . 
+. w w b w w w w w . 
+. w b w b b w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 49
+BLACK: 15
+
+play, 126
+----------------------------------------
+. . . . . . . . . . 
+. w b b b w w w w . 
+. w w w w w w w w . 
+. w b b b w b w w . 
+. w b b b b w b w . 
+. w b w w w w b w . 
+. w w w w w b w w . 
+. w w w w b w b w . 
+. w w w w w w b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 46
+BLACK: 18
+
+play, 127
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w b b b b w w w . 
+. w b w w w w w w . 
+. w b b w w w w w . 
+. w b w b w w b w . 
+. w b b w b b w w . 
+. w b b w w b w w . 
+. b b b b w w b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 42
+BLACK: 22
+
+play, 128
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b b w w . 
+. w w w w b w w w . 
+. w w w w w b w w . 
+. b w b w w w b w . 
+. b w w b b b w w . 
+. w w w w b w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 129
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w b b . 
+. w w w w w w w w . 
+. w w w w b b w w . 
+. w w w b b w b w . 
+. w w w b w w w w . 
+. w w w w b w w w . 
+. w w w w w w w w . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 54
+BLACK: 10
+
+play, 130
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b b b w w b w b . 
+. b b b w b b b b . 
+. b b b w w w w b . 
+. b w w w b w w w . 
+. b b w w w b w w . 
+. b b w w w w w w . 
+. w w w b b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 35
+BLACK: 29
+
+play, 131
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b b b w . 
+. w w w w w b b w . 
+. w w b w w b b w . 
+. w b b w w b b w . 
+. w b w b b b b w . 
+. w b w b b w b w . 
+. w w w w w b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 38
+BLACK: 26
+
+play, 132
+----------------------------------------
+. . . . . . . . . . 
+. w b w w w w w w . 
+. w w b w w w w w . 
+. w b w b w w w w . 
+. w w b w b w w w . 
+. w w w w w b w w . 
+. w w w w w w b w . 
+. w b b b b b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 51
+BLACK: 13
+
+play, 133
+----------------------------------------
+. . . . . . . . . . 
+. w w w w b b b b . 
+. w w w w w b b b . 
+. w w b w w w b b . 
+. w w w w w b w b . 
+. w w w w b w w w . 
+. w w b b w b w w . 
+. w w w w b w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 47
+BLACK: 17
+
+play, 134
+----------------------------------------
+. . . . . . . . . . 
+. b b w w w w w w . 
+. b b w w w b w w . 
+. b w b w w w w w . 
+. b w w b w b w b . 
+. b w w b b w b b . 
+. b w b b w b b b . 
+. b w w w w w w b . 
+. b b b b b b w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 33
+BLACK: 31
+
+play, 135
+----------------------------------------
+. . . . . . . . . . 
+. w w b b w w w w . 
+. w w b b b w w w . 
+. w w b b w w w w . 
+. w w b b w w w w . 
+. w w w b w w w w . 
+. w w b w b b w w . 
+. w w w b w b w w . 
+. b b b b b b b w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 42
+BLACK: 22
+
+play, 136
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w b w w w w w w . 
+. w b b w w w w w . 
+. w b b w w w w w . 
+. w b b w w w w w . 
+. w w b b b w w b . 
+. w w b b w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 51
+BLACK: 13
+
+play, 137
+----------------------------------------
+. . . . . . . . . . 
+. w w w w b w w w . 
+. w w w w b b w w . 
+. w w w w w w b w . 
+. w w w w w w w w . 
+. w w w w w w b w . 
+. w w w w w w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 58
+BLACK: 6
+
+play, 138
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b w w b w w w b . 
+. b w w w w w w b . 
+. b w w w b b b b . 
+. b w w w w b w w . 
+. b w w w b w w w . 
+. b b w b b b w w . 
+. b b b w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 41
+BLACK: 23
+
+play, 139
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w b w b w w . 
+. w b w b w w b w . 
+. w b b b w b w w . 
+. w w b b w w w w . 
+. w b w b w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 51
+BLACK: 13
+
+play, 140
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w b b b . 
+. w w b w w w w w . 
+. w b w b b b w w . 
+. w b b b b w w w . 
+. w b b b w w w w . 
+. w b b w w w w w . 
+. w w b w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 46
+BLACK: 18
+
+play, 141
+----------------------------------------
+. . . . . . . . . . 
+. b w w w w w w w . 
+. b b w w w w w w . 
+. b b b w w w w w . 
+. b b b w w w w w . 
+. b b b w w w w w . 
+. b b b w b w w w . 
+. b b b b w b w w . 
+. b b b w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 40
+BLACK: 24
+
+play, 142
+----------------------------------------
+. . . . . . . . . . 
+. b b w w w w w w . 
+. w w w w w w w w . 
+. w w w b w w w w . 
+. w w w w b w w w . 
+. w w w w b b w w . 
+. w w w w w w b w . 
+. w w w w w w w b . 
+. w w w w w w w b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 55
+BLACK: 9
+
+play, 143
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b b w w . 
+. w w w b b w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 59
+BLACK: 5
+
+play, 144
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w w w b b w w . 
+. w w w w w w w w . 
+. w w w w b w w b . 
+. w w w w w w b b . 
+. w w w w w w b b . 
+. w w w w w w b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 54
+BLACK: 10
+
+play, 145
+----------------------------------------
+. . . . . . . . . . 
+. b b b b b w w w . 
+. w w w w b w w w . 
+. w w w w w b b w . 
+. w w w w w b b w . 
+. w w w w w b b w . 
+. w w w w b w b w . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 50
+BLACK: 14
+
+play, 146
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w w w w w . 
+. w w b w w w w w . 
+. w w b w w w w w . 
+. w w w w w w w w . 
+. w w b w b w w w . 
+. b w w w w w w w . 
+. w w b b b b b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 53
+BLACK: 11
+
+play, 147
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w b b w w . 
+. w w w w b w b w . 
+. w w w b b b w w . 
+. w w b b w w w w . 
+. w w b w w w w w . 
+. b w w w w b w w . 
+. w w w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 52
+BLACK: 12
+
+play, 148
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. w w w w b w b w . 
+. w w b w b b w w . 
+. w w b w w w b w . 
+. w w w b w w b w . 
+. w w w w b w b w . 
+. w w w w w b b w . 
+. w w w w w w b b . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 49
+BLACK: 15
+
+play, 149
+----------------------------------------
+. . . . . . . . . . 
+. w w w w w w w w . 
+. b b b w w w w w . 
+. w b b b w w w w . 
+. w b b w w b w w . 
+. w b w w b b w w . 
+. w w w b w b w w . 
+. b b b w w w w w . 
+. b b w w w w w w . 
+. . . . . . . . . . 
+----------------------------------------
+WHITE: 45
+BLACK: 19
+
+black: 4
+white: 146
+draw: 0
+
+Program end at Thu Jan 13 11:20:22 2022
+
