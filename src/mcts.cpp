@@ -10,9 +10,6 @@ void MCTS::train(Node &root_node, int simulation)
     extern double total_cuda, total_cpu;
     if (TIME_OUTPUT)
     {
-        printf("%2d, ", root_node.get_state().game.get_turn());
-    
-
         total_cuda = 0;
         total_cpu = 0;
     }
@@ -24,6 +21,7 @@ void MCTS::train(Node &root_node, int simulation)
 
     if (TIME_OUTPUT)
     {
+        printf("%2d, ", root_node.get_state().game.get_turn());
         printf("%7.3f, %7.3f\n", total_cuda / simulation, total_cpu / simulation);
     }
 }

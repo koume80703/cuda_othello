@@ -25,5 +25,5 @@ void print_data(string str, double data)
 
 void print_percentage(double mt, double et, double ot)
 {
-    printf("percentage -> malloc: %.3f [%%], execution: %.3f [%%], others: %.3f [%%]\n", mt, et, ot);
+    printf("Percentage, malloc: %.5f, execution: %.5f, others: %.5f\n", mt, et, ot);
 }

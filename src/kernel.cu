@@ -4,7 +4,6 @@ __global__ void kernel(STATE_CUDA *sc, float *result, int seed)
 {
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
 
-
     STATE_CUDA sc_dst;
     sc_dst.turn = sc->turn;
     sc_dst.player = sc->player;
@@ -23,7 +22,7 @@ __global__ void kernel(STATE_CUDA *sc, float *result, int seed)
     curandStateXORWOW_t s;
     curand_init(seed, idx, 0, &s);
 
-    result[idx] = playout_gpu(&sc_dst, &s);
+    result[idx] = playout_gpu(&sc_dst, &s);    
 }
 
 __device__ float playout_gpu(STATE_CUDA *sc, curandState *s)
@@ -87,7 +86,7 @@ __device__ bool is_win(STATE_CUDA *sc)
 
 __device__ bool is_lose(STATE_CUDA *sc)
 {
-    return !is_win(sc);
+    return !is_draw(sc) && !is_win(sc);
 }
 
 __device__ void legal_actions(STATE_CUDA *sc, int la[][2])

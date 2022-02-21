@@ -54,7 +54,8 @@ int play_othello()
         }
         else
         {
-            action = mcts_action(state, PLAYER::WHITE, EXPAND_BASE, N_SIMULATION);
+            // action = mcts_action(state, PLAYER::WHITE, EXPAND_BASE, N_SIMULATION);
+            action = random_action(state);
             state = state.next(action);
         }
     }
@@ -64,43 +65,44 @@ int main(void)
 {
     time_t time = system_clock::to_time_t(system_clock::now());
     cout << "Starting program at " << ctime(&time) << endl;
-    cout << "Parameter: CUDA_PLAYOUT, n_playout, N_SIMULATION, EXPAND_BASE" << endl << endl;
+    cout << "Parameter, CUDA_PLAYOUT, n_playout, N_SIMULATION, EXPAND_BASE" << endl << endl;
 
     extern int n_playout;
     if (MESURING_STRENGTH)
     {
-        int win = 0, lose = 0, draw = 0;
-        const int play_num = 1;
-        n_playout = 1024;
+        for (n_playout = 128; n_playout < 129; n_playout *= 2)
+        {
+            int win = 0, lose = 0, draw = 0;
+            const int play_num = 150;
     
-        printf("Parameter, %d, %d, %d, %d\n", CUDA_PLAYOUT, n_playout, N_SIMULATION, EXPAND_BASE);
+            printf("Parameter, %d, %d, %d, %d\n", CUDA_PLAYOUT, n_playout, N_SIMULATION, EXPAND_BASE);
 
-        for (int i = 0; i < play_num; i++)
-        {
-            cout << "play, " << i << endl;
-            int result = play_othello();
+            for (int i = 0; i < play_num; i++)
+            {
+                cout << "play, " << i << endl;
+                int result = play_othello();
+                cout << endl;
+                if (result == 0)
+                    draw++;
+                else if (result == 1)
+                    win++;
+                else
+                    lose++;
+            }
+
+            if (BASIC_OUTPUT)
+            {
+                cout << "black, " << win << endl;
+                cout << "white, " << lose << endl;
+                cout << "draw, " << draw << endl;
+            }
+
             cout << endl;
-            if (result == 0)
-                draw++;
-            else if (result == 1)
-                win++;
-            else
-                lose++;
         }
-
-        if (BASIC_OUTPUT)
-        {
-            cout << "black: " << win << endl;
-            cout << "white: " << lose << endl;
-            cout << "draw: " << draw << endl;
-        }
-
-        cout << endl;
     }
     else
     {
-
-        for (n_playout = 2; n_playout < 256; n_playout *= 2){
+        for (n_playout = 8192; n_playout <= 65536; n_playout += 8704){
             int win = 0, lose = 0, draw = 0;
             const int play_num = 5;
     

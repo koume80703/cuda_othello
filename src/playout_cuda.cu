@@ -8,7 +8,7 @@ float playout_cuda(State state, PLAYER base_player)
     start = get_time_msec();
 
     extern int n_playout;
-    int nElem = (base_player == PLAYER::BLACK) ? n_playout : n_playout*4;
+    int nElem = (base_player == PLAYER::BLACK) ? n_playout : N_PLAYOUT;
     size_t size_sc = sizeof(STATE_CUDA);
     size_t size_result = nElem * sizeof(float);
 
@@ -26,15 +26,15 @@ float playout_cuda(State state, PLAYER base_player)
     CHECK(cudaMemcpy(d_sc, h_sc, size_sc, cudaMemcpyHostToDevice));
     CHECK(cudaMemcpy(d_result, h_result, size_result, cudaMemcpyHostToDevice));
 
-    const int threads_per_block = 512;
+    const int threads_per_block = THREADS_PER_BLOCK;
 
     dim3 block(threads_per_block, 1, 1);
-    dim3 grid((nElem + block.x -1) / block.x, 1, 1);
+    dim3 grid((nElem + block.x - 1) / block.x, 1, 1);
 
     std::random_device rnd;
     int seed = rnd();
 
-    // memory allocate time
+    /* memory allocate time */
     tmp = get_time_msec();
     elapsed = tmp - start;
     start = tmp;
@@ -45,7 +45,7 @@ float playout_cuda(State state, PLAYER base_player)
 
     CHECK(cudaDeviceSynchronize());
 
-    // exectution time
+    /* exectution time */
     tmp = get_time_msec();
     elapsed = tmp - start;
     start = tmp;
@@ -66,7 +66,7 @@ float playout_cuda(State state, PLAYER base_player)
     free(h_sc);
     free(h_result);
     
-    // others time
+    /* others time */
     tmp = get_time_msec();
     elapsed = tmp - start;
     extern double others_time;

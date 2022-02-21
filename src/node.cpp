@@ -41,19 +41,22 @@ float Node::evaluate()
             }
             
             value += playout_cuda(tmp, base_player);
-            
+
             if (TIME_OUTPUT)
             {
                 end = get_time_msec();
                 elapsed_cuda = end - start;
 
-                start = get_time_msec();
-                for (int i = 0; i < n_playout; i++)
+                if (!ONLY_CUDA)
                 {
-                    Node::playout(tmp, base_player);
+                    start = get_time_msec();
+                    for (int i = 0; i < n_playout; i++)
+                    {
+                        Node::playout(tmp, base_player);
+                    }
+                    end = get_time_msec();
+                    elapsed_cpu = end - start;
                 }
-                end = get_time_msec();
-                elapsed_cpu = end - start;
             }
         }
         else
@@ -85,6 +88,12 @@ float Node::evaluate()
             extern double total_cuda, total_cpu;
             total_cuda += elapsed_cuda;
             total_cpu += elapsed_cpu;
+
+            /*
+            extern double malloc_time, exe_time, others_time;
+            printf("elapsed, %.3f\n", elapsed_cuda);
+            print_percentage(malloc_time/elapsed_cuda, exe_time/elapsed_cuda, others_time/elapsed_cuda);            
+            */
         }
         
         w += value;

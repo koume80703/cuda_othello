@@ -1,0 +1,6 @@
+Starting program at Mon Feb 21 13:35:15 2022
+
+Parameter, CUDA_PLAYOUT, n_playout, N_SIMULATION, EXPAND_BASE
+
+Parameter, 1, 8192, 100, 20
+play, 0

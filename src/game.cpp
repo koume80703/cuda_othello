@@ -186,7 +186,7 @@ bool Game::is_win(PLAYER base_player)
 
 bool Game::is_lose(PLAYER base_player)
 {
-    return !is_win(base_player);
+    return !is_draw() && !is_win(base_player);
 }
 
 bool Game::is_draw()

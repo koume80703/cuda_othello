@@ -7,13 +7,15 @@
 #include <ctime>
 
 #define CUDA_PLAYOUT true
-#define BASIC_OUTPUT true
-#define TIME_OUTPUT false
-#define MESURING_STRENGTH true
+#define ONLY_CUDA true
+#define BASIC_OUTPUT false
+#define TIME_OUTPUT true
+#define MESURING_STRENGTH false
 
-#define N_PLAYOUT 1024
+#define N_PLAYOUT 2048
 #define N_SIMULATION 100
 #define EXPAND_BASE 20
+#define THREADS_PER_BLOCK 512
 
 
 using namespace std;
